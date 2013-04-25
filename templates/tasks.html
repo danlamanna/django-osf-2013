@@ -1,3 +1,7 @@
-{% for task in tasks %}
-  <input type="checkbox" {% if task.completed %}checked="checked"{% endif %} /> - {{ task.name }}<br />
-{% endfor %}
+{% extends "layout.html" %}
+
+{% block content %}
+  {% for task in tasks %}
+    <input type="checkbox" {% if task.completed %}checked="checked"{% endif %} /> - {{ task.name }}<br />
+  {% endfor %}
+{% endblock %}
